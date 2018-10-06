@@ -107,7 +107,8 @@ int main( int argc, char *argv[] )
 
 	ArgParam init_arg = {
 		argv[0],
-		".",
+//		"./images/",
+		argv[1],
 		"%d/imageclipper/%i.%e_%04r_%04x_%04y_%04w_%04h.png",
 		"%d/imageclipper/%i.%e_%04f_%04r_%04x_%04y_%04w_%04h.png",
 		NULL,
@@ -117,6 +118,7 @@ int main( int argc, char *argv[] )
 
 	// parse arguments
 	arg_parse(argc, argv, arg);
+	cout << "path :"<<arg->reference<<endl;
 	gui_usage();
 	load_reference(arg, param);
 
